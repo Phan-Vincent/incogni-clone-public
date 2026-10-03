@@ -1,0 +1,12 @@
+[Unit]
+Description=Hourly Personal Privacy Service synthetic soak checks
+
+[Timer]
+OnCalendar=hourly
+RandomizedDelaySec=5m
+Persistent=true
+Unit=incogni-soak.service
+
+[Install]
+WantedBy=timers.target
+

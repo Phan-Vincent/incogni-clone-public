@@ -1,0 +1,35 @@
+[Unit]
+Description=Personal Privacy Service isolated browser worker
+After=network-online.target incogni-worker.service
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+ConditionPathExists=/etc/incogni/browser-enabled
+
+[Service]
+Type=simple
+User=incogni-browser
+Group=incogni
+WorkingDirectory=/opt/incogni
+ExecStart=/opt/incogni/.venv/bin/incogni browser-worker
+Restart=on-failure
+RestartSec=10s
+LoadCredential=incogni-master-key:/etc/incogni/credentials/incogni-master-key
+LoadCredential=incogni-admin-password:/etc/incogni/credentials/incogni-admin-password
+Environment=INCOGNI_DATA_DIR=/var/lib/incogni
+Environment=PLAYWRIGHT_BROWSERS_PATH=/opt/incogni/.playwright
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+ReadWritePaths=/var/lib/incogni
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

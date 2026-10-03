@@ -1,0 +1,33 @@
+[Unit]
+Description=Audit Personal Privacy Service journal for PII patterns
+Before=incogni-soak.service
+
+[Service]
+Type=oneshot
+User=incogni
+Group=incogni
+SupplementaryGroups=systemd-journal
+WorkingDirectory=/opt/incogni
+ExecStart=/opt/incogni/.venv/bin/incogni soak audit-journal --output /run/incogni-journal-audit/status.json
+RuntimeDirectory=incogni-journal-audit
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=yes
+TimeoutStartSec=8min
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+UMask=0022
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+InaccessiblePaths=/etc/incogni /var/lib/incogni
+ReadWritePaths=/run/incogni-journal-audit
+RestrictAddressFamilies=AF_UNIX

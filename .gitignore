@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+# Real credentials and PII must never enter model context or VCS.
+.env
+.env.*
+!.env.example
+
+# Privacy-sensitive data
+# Real PII and credentials must never enter model context or version control.
+private/
+evidence/
+identity-documents/
+backups/
+
+# Databases (incl. SQLite WAL/SHM sidecars)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+
+# OAuth / client secret JSON files
+*oauth*.json
+*client*secret*.json
+*client-secret*.json
+
+# Playwright auth state (saved logged-in browser sessions)
+playwright/.auth/
+.auth/
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Tooling
+.idea/
+.vscode/
+*.swp
+.DS_Store

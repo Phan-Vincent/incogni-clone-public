@@ -1,0 +1,18 @@
+{
+  "first_name": "Jane",
+  "middle_name": "Quinn",
+  "last_name": "Doe",
+  "aliases": ["Jane Q. Doe"],
+  "emails": ["jane.doe@example.com"],
+  "phones": ["(555) 010-0199"],
+  "addresses": [
+    {
+      "street": "123 Example St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701"
+    }
+  ],
+  "date_of_birth": "1985-06-15",
+  "relatives": ["John Doe"]
+}

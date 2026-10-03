@@ -1,0 +1,67 @@
+{
+  "brokers": [
+    {
+      "id": "peoplefinder_like",
+      "name": "PeopleFinder+ (simulated)",
+      "category": "people-search",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/peoplefinder/optout",
+      "adapter": "mock",
+      "description": "People-search site aggregating name/address/phone records."
+    },
+    {
+      "id": "whitepages_like",
+      "name": "WhitePages (simulated)",
+      "category": "people-search",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/whitepages/optout",
+      "adapter": "mock",
+      "description": "Directory of contact and address listings."
+    },
+    {
+      "id": "spokeo_like",
+      "name": "Spokeo (simulated)",
+      "category": "people-search",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/spokeo/optout",
+      "adapter": "mock",
+      "description": "People-search aggregator across social + public records."
+    },
+    {
+      "id": "mylife_like",
+      "name": "MyLife (simulated)",
+      "category": "reputation",
+      "optout_method": "email",
+      "optout_url": "mailto:privacy@example-broker.invalid",
+      "adapter": "mock",
+      "description": "Reputation/profile site; removals handled by email."
+    },
+    {
+      "id": "instantcheckmate_like",
+      "name": "Instant Checkmate (simulated)",
+      "category": "background-check",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/instantcheckmate/optout",
+      "adapter": "mock",
+      "description": "Background-check / public-records search."
+    },
+    {
+      "id": "beenverified_like",
+      "name": "BeenVerified (not yet integrated)",
+      "category": "background-check",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/beenverified/optout",
+      "adapter": "stub",
+      "description": "Known broker; adapter not implemented yet."
+    },
+    {
+      "id": "intelius_like",
+      "name": "Intelius (not yet integrated)",
+      "category": "background-check",
+      "optout_method": "form",
+      "optout_url": "https://example-broker.invalid/intelius/optout",
+      "adapter": "stub",
+      "description": "Known broker; adapter not implemented yet."
+    }
+  ]
+}

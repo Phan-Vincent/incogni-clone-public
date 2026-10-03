@@ -1,0 +1,6 @@
+{
+  "application_authentication": true,
+  "funnel": false,
+  "mode": "serve",
+  "target": "http://127.0.0.1:8765"
+}

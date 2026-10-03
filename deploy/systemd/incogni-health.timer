@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodic Personal Privacy Service health probe
+
+[Timer]
+OnActiveSec=2m
+OnUnitActiveSec=5m
+Unit=incogni-health.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Personal Privacy Service maintenance scheduling
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=30m
+Persistent=true
+Unit=incogni-maintenance.service
+
+[Install]
+WantedBy=timers.target
