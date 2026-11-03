@@ -1,4 +1,4 @@
-"""Command-line interface for incogni-clone."""
+"""Command-line interface for data-broker-optout."""
 
 from __future__ import annotations
 
@@ -147,7 +147,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="incogni",
         description="Scan data brokers for your PII and automate removal requests.",
     )
-    parser.add_argument("--version", action="version", version=f"incogni-clone {__version__}")
+    parser.add_argument("--version", action="version", version=f"data-broker-optout {__version__}")
     parser.add_argument(
         "--profile", default=str(DEFAULT_PROFILE),
         help="path to a JSON PII profile (default: examples/profile.json)",

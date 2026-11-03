@@ -369,7 +369,9 @@ class ManualAssistTest(unittest.TestCase):
             "UPDATE removal_requests SET updated_at=? WHERE id=?",
             ((self.now - timedelta(days=31)).isoformat(), request_id),
         )
-        ServiceScheduler(self.store).enqueue_due_rechecks(self.now)
+        scheduler = ServiceScheduler(self.store)
+        scheduler.queue.clock = lambda: self.now  # jobs must be due on the test's clock
+        scheduler.enqueue_due_rechecks(self.now)
         self.assertEqual(self.jobs("verify_removal"), [])
         self.assertEqual(len(self.jobs("manual_recheck_reminder")), 2)
         self.store.conn.execute(

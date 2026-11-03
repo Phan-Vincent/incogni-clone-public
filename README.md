@@ -1,4 +1,6 @@
-# incogni-clone
+# data-broker-optout
+
+[![tests](https://github.com/Phan-Vincent/data-broker-optout/actions/workflows/tests.yml/badge.svg)](https://github.com/Phan-Vincent/data-broker-optout/actions/workflows/tests.yml)
 
 A self-hosted, single-operator personal-data removal service, modelled on commercial
 services such as [Incogni](https://incogni.com/). It tracks where your personal
@@ -8,6 +10,7 @@ re-checks when listings reappear.
 
 > **Independent project.** Not affiliated with, endorsed by, or connected to Incogni
 > or Surfshark. "Incogni" is used only to describe the category of service.
+> (Formerly `incogni-clone`; the Python package and service names are still `incogni`.)
 
 > **Status: safety-first foundation, no live automation.** Every broker flow ships
 > **paused and monitor-only**. No production transport to any broker is enabled,
